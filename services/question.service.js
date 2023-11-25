@@ -2,6 +2,7 @@ const { StatusCodes } = require("http-status-codes");
 const { Logger } = require("../config");
 const AppError = require("../utils/errors/app.error");
 const fs = require("fs");
+const path = require("path");
 const questionsPath = path.join(__dirname, "..", "/questions.json");
 
 async function loadQuestions(filePath) {
