@@ -1,6 +1,6 @@
-const dotenv = require("dotenv").config();
 const express = require("express");
 const bodyParser = require("body-parser");
+const { ServerConfig } = require("./config");
 const morgan = require("morgan");
 const colors = require("@colors/colors");
 
@@ -14,6 +14,8 @@ app.use(morgan("dev"));
 
 app.use("/", routes);
 
-app.listen(PORT, function () {
-  console.log(`App listening on port ${PORT}!`.brightCyan.bgMagenta);
+app.listen(ServerConfig.PORT, function () {
+  console.log(
+    `App listening on port ${ServerConfig.PORT}!`.brightCyan.bgMagenta
+  );
 });
