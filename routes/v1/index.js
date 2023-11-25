@@ -3,4 +3,4 @@ const router = express.Router();
 
 const questionRoutes = require("./questons.routes");
 
-router.use("/questions", airplaneRoutes);
+router.use("/questions", questionRoutes);
