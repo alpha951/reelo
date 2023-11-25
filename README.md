@@ -48,7 +48,7 @@ The application provides a RESTful API to fetch questions for a quiz. Refer to t
 
 ## API Endpoint
 
-- **Endpoint:** `/api/v1/questions`
+- **Endpoint:** `/v1/questions`
 - **Method:** `POST`
 
 ## Request Body
