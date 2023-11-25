@@ -5,17 +5,13 @@ const { QuestionPaper } = require("../services");
 
 async function getQuestions(req, res) {
   try {
-    const {
-      totalMarks,
-      easyPercentage,
-      mediumPercentage,
-      difficultPercentage,
-    } = req.body;
+    const { totalMarks, easyPercentage, mediumPercentage, hardPercentage } =
+      req.body;
     const questions = await QuestionPaper.getQuestions({
       totalMarks,
       easy: easyPercentage,
       medium: mediumPercentage,
-      hard: difficultPercentage,
+      hard: hardPercentage,
     });
     SuccessResponse.data = questions;
     return res.status(StatusCodes.OK).json(SuccessResponse);

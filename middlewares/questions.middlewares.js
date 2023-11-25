@@ -21,10 +21,10 @@ function validateGetRequest(req, res, next) {
     return res.status(StatusCodes.BAD_REQUEST).json(ErrorResponse);
   }
 
-  if (!req.body.difficultPercentage) {
+  if (!req.body.hardPercentage) {
     ErrorResponse.message = "Something went wrong while getting the questions";
     ErrorResponse.explanation =
-      "difficultPercentage not found in the request body";
+      "hardPercentage not found in the request body";
     return res.status(StatusCodes.BAD_REQUEST).json(ErrorResponse);
   }
 

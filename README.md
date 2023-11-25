@@ -92,15 +92,61 @@ const questionService = require('./path/to/question.service.js');
 
 // Example usage
 const requestData = {
-  totalMarks: 100,
-  easyPercentage: 30,
-  mediumPercentage: 40,
-  hardPercentage: 30
+  totalMarks: 20,
+  easyPercentage: 100,
+  mediumPercentage: 0,
+  hardPercentage: 0
 };
 
 questionService.getQuestions(requestData)
   .then(questions => console.log('Selected Questions:', questions))
   .catch(error => console.error('Error:', error));
+```
+```json
+{
+    "success": true,
+    "message": "Successfully completed the request",
+    "data": {
+        "easy": [
+            {
+                "id": 1,
+                "question": "What is the speed of light",
+                "subject": "Physics",
+                "topic": "Motion",
+                "difficulty": "Easy",
+                "marks": 5
+            },
+            {
+                "id": 3,
+                "question": "If an object is moving with constant speed, what can you say about its acceleration?",
+                "subject": "Physics",
+                "topic": "Motion",
+                "difficulty": "Easy",
+                "marks": 5
+            },
+            {
+                "id": 6,
+                "question": "What is the molecular structure of water?",
+                "subject": "Chemistry",
+                "topic": "Chemical Bonding",
+                "difficulty": "Easy",
+                "marks": 5
+            },
+            {
+                "id": 10,
+                "question": "What are isotopes in the context of atomic structure?",
+                "subject": "Chemistry",
+                "topic": "Atomic Structure",
+                "difficulty": "Easy",
+                "marks": 5
+            }
+        ],
+        "medium": [],
+        "hard": []
+    },
+    "error": {}
+}
+
 ```
 
 ## Error Handling
