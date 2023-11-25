@@ -37,7 +37,7 @@
     "subject": "Mathematics",
     "topic": "Calculus",
     "difficulty": "Hard",
-    "marks": 20
+    "marks": 15
   },
   {
     "id": 6,
@@ -61,7 +61,7 @@
     "subject": "Physics",
     "topic": "Quantum Mechanics",
     "difficulty": "Hard",
-    "marks": 20
+    "marks": 15
   },
   {
     "id": 9,
@@ -85,7 +85,7 @@
     "subject": "Mathematics",
     "topic": "Trigonometry",
     "difficulty": "Hard",
-    "marks": 20
+    "marks": 15
   },
   {
     "id": 12,
@@ -101,7 +101,7 @@
     "subject": "Physics",
     "topic": "Modern Physics",
     "difficulty": "Hard",
-    "marks": 20
+    "marks": 15
   },
   {
     "id": 14,
@@ -125,7 +125,7 @@
     "subject": "Chemistry",
     "topic": "Organic Chemistry",
     "difficulty": "Hard",
-    "marks": 20
+    "marks": 15
   },
   {
     "id": 17,
@@ -149,10 +149,10 @@
     "subject": "Chemistry",
     "topic": "Gases",
     "difficulty": "Hard",
-    "marks": 20
+    "marks": 15
   },
   {
-    "id": 20,
+    "id": 15,
     "question": "Explain the concept of centripetal force in circular motion.",
     "subject": "Physics",
     "topic": "Circular Motion",
@@ -173,7 +173,7 @@
     "subject": "Chemistry",
     "topic": "Chemical Bonding",
     "difficulty": "Hard",
-    "marks": 20
+    "marks": 15
   },
   {
     "id": 23,
@@ -181,7 +181,7 @@
     "subject": "Physics",
     "topic": "Optics",
     "difficulty": "Hard",
-    "marks": 20
+    "marks": 15
   },
   {
     "id": 24,
@@ -205,7 +205,7 @@
     "subject": "Chemistry",
     "topic": "Molecular Geometry",
     "difficulty": "Hard",
-    "marks": 20
+    "marks": 15
   },
   {
     "id": 27,
@@ -229,7 +229,7 @@
     "subject": "Chemistry",
     "topic": "Chemical Reactions",
     "difficulty": "Hard",
-    "marks": 20
+    "marks": 15
   },
   {
     "id": 30,
@@ -253,7 +253,7 @@
     "subject": "Chemistry",
     "topic": "Organic Chemistry",
     "difficulty": "Hard",
-    "marks": 20
+    "marks": 15
   },
   {
     "id": 33,
@@ -269,7 +269,7 @@
     "subject": "Mathematics",
     "topic": "Differential Calculus",
     "difficulty": "Hard",
-    "marks": 20
+    "marks": 15
   },
   {
     "id": 35,
@@ -285,7 +285,7 @@
     "subject": "Physics",
     "topic": "Electromagnetism",
     "difficulty": "Hard",
-    "marks": 20
+    "marks": 15
   },
   {
     "id": 37,
@@ -301,7 +301,7 @@
     "subject": "Chemistry",
     "topic": "Organic Chemistry",
     "difficulty": "Hard",
-    "marks": 20
+    "marks": 15
   },
   {
     "id": 39,
@@ -325,7 +325,7 @@
     "subject": "Chemistry",
     "topic": "Chemical Equilibrium",
     "difficulty": "Hard",
-    "marks": 20
+    "marks": 15
   },
   {
     "id": 42,
@@ -349,7 +349,7 @@
     "subject": "Chemistry",
     "topic": "Analytical Chemistry",
     "difficulty": "Hard",
-    "marks": 20
+    "marks": 15
   },
   {
     "id": 45,
@@ -365,7 +365,7 @@
     "subject": "Mathematics",
     "topic": "Differential Equations",
     "difficulty": "Hard",
-    "marks": 20
+    "marks": 15
   },
   {
     "id": 47,
@@ -373,7 +373,7 @@
     "subject": "Chemistry",
     "topic": "Organic Chemistry",
     "difficulty": "Hard",
-    "marks": 20
+    "marks": 15
   },
   {
     "id": 48,
@@ -397,7 +397,7 @@
     "subject": "Chemistry",
     "topic": "Nuclear Chemistry",
     "difficulty": "Hard",
-    "marks": 20
+    "marks": 15
   },
   {
     "id": 51,
@@ -413,7 +413,7 @@
     "subject": "Mathematics",
     "topic": "Differential Equations",
     "difficulty": "Hard",
-    "marks": 20
+    "marks": 15
   },
   {
     "id": 53,
@@ -421,7 +421,7 @@
     "subject": "Chemistry",
     "topic": "Organic Chemistry",
     "difficulty": "Hard",
-    "marks": 20
+    "marks": 15
   },
   {
     "id": 54,
@@ -445,7 +445,7 @@
     "subject": "Chemistry",
     "topic": "Nuclear Chemistry",
     "difficulty": "Hard",
-    "marks": 20
+    "marks": 15
   },
   {
     "id": 57,
