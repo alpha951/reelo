@@ -6,6 +6,6 @@ const {
   validateGetRequest,
 } = require("../../middlewares/questions.middlewares");
 
-router.get("/", validateGetRequest, questionController.getQuestions);
+router.post("/", validateGetRequest, questionController.getQuestions);
 
 module.exports = router;

@@ -3,11 +3,12 @@ const { Logger } = require("../config");
 const AppError = require("../utils/errors/app.error");
 const fs = require("fs");
 const path = require("path");
+const { all } = require("../routes");
 const questionsPath = path.join(__dirname, "..", "/questions.json");
 
 async function loadQuestions(filePath) {
   try {
-    const questionStore = await fs.readFile(filePath, "utf8");
+    const questionStore = fs.readFileSync(filePath, "utf8");
     const parsedQuestion = JSON.parse(questionStore);
     return parsedQuestion;
   } catch (error) {
@@ -35,19 +36,19 @@ async function getQuestions(data) {
     for (let question of allQuestions) {
       if (marks >= totalMarks) break;
       let isSelected = false;
-      if (question.difficulty === "easy" && easyMarks >= question.marks) {
+      if (question.difficulty === "Easy" && easyMarks >= question.marks) {
         easyQuestions.push(question);
         easyMarks -= question.marks;
         isSelected = true;
       } else if (
-        question.difficulty === "medium" &&
+        question.difficulty === "Medium" &&
         mediumMarks >= question.marks
       ) {
         mediumQuestions.push(question);
         mediumMarks -= question.marks;
         isSelected = true;
       } else if (
-        question.difficulty === "hard" &&
+        question.difficulty === "Hard" &&
         hardMarks >= question.marks
       ) {
         hardQuestions.push(question);
@@ -58,7 +59,7 @@ async function getQuestions(data) {
         marks += question.marks;
       }
     }
-
+    console.log(easyQuestions, mediumQuestions, hardQuestions);
     if (easyMarks > 0)
       throw new AppError(
         "Not enough easy questions !",
@@ -85,6 +86,7 @@ async function getQuestions(data) {
     return questions;
   } catch (error) {
     Logger.error(error);
+    if (error instanceof AppError) throw error;
     throw new AppError(
       "Cannot get  questions !",
       StatusCodes.INTERNAL_SERVER_ERROR
