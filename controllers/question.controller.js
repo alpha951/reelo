@@ -1,5 +1,6 @@
 const { StatusCodes } = require("http-status-codes");
 const { SuccessResponse, ErrorResponse } = require("../utils/common");
+const { Logger } = require("../config");
 
 async function getQuestions(req, res) {
   try {

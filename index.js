@@ -3,8 +3,6 @@ const bodyParser = require("body-parser");
 const { ServerConfig } = require("./config");
 const morgan = require("morgan");
 const colors = require("@colors/colors");
-
-const PORT = process.env.PORT | 5000;
 const app = express();
 const routes = require("./routes/");
 
