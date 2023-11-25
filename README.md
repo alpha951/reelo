@@ -85,23 +85,140 @@ Selects questions based on the provided criteria (total marks and difficulty per
 
 ### Usage
 
-To use the `getQuestions` function, import it into your application:
 
-```javascript
-const questionService = require('./path/to/question.service.js');
+#### Example - 1
 
-// Example usage
-const requestData = {
-  totalMarks: 20,
-  easyPercentage: 100,
-  mediumPercentage: 0,
-  hardPercentage: 0
-};
+<b>req.body</b>
 
-questionService.getQuestions(requestData)
-  .then(questions => console.log('Selected Questions:', questions))
-  .catch(error => console.error('Error:', error));
+````json
+    {
+    "totalMarks": 100,
+    "easyPercentage": 20,
+    "mediumPercentage": 50,
+    "hardPercentage": 30
+    }
+````
+<b>response</b>
+
+```json
+{
+    "success": true,
+    "message": "Successfully completed the request",
+    "data": {
+        "easy": [
+            {
+                "id": 1,
+                "question": "What is the speed of light",
+                "subject": "Physics",
+                "topic": "Motion",
+                "difficulty": "Easy",
+                "marks": 5
+            },
+            {
+                "id": 3,
+                "question": "If an object is moving with constant speed, what can you say about its acceleration?",
+                "subject": "Physics",
+                "topic": "Motion",
+                "difficulty": "Easy",
+                "marks": 5
+            },
+            {
+                "id": 6,
+                "question": "What is the molecular structure of water?",
+                "subject": "Chemistry",
+                "topic": "Chemical Bonding",
+                "difficulty": "Easy",
+                "marks": 5
+            },
+            {
+                "id": 10,
+                "question": "What are isotopes in the context of atomic structure?",
+                "subject": "Chemistry",
+                "topic": "Atomic Structure",
+                "difficulty": "Easy",
+                "marks": 5
+            }
+        ],
+        "medium": [
+            {
+                "id": 2,
+                "question": "State the first law of thermodynamics.",
+                "subject": "Physics",
+                "topic": "Thermodynamics",
+                "difficulty": "Medium",
+                "marks": 10
+            },
+            {
+                "id": 4,
+                "question": "Solve the quadratic equation: (2x^2 - 5x + 2 = 0).",
+                "subject": "Mathematics",
+                "topic": "Quadratic Equations",
+                "difficulty": "Medium",
+                "marks": 10
+            },
+            {
+                "id": 7,
+                "question": "Balance the following chemical equation: (C_4H_{10} + O_2 rightarrow CO_2 + H_2O).",
+                "subject": "Chemistry",
+                "topic": "Chemical Equations",
+                "difficulty": "Medium",
+                "marks": 10
+            },
+            {
+                "id": 9,
+                "question": "Evaluate the integral: (int (3x^2 + 2x - 5) ,dx).",
+                "subject": "Mathematics",
+                "topic": "Integration",
+                "difficulty": "Medium",
+                "marks": 10
+            },
+            {
+                "id": 12,
+                "question": "Explain the concept of oxidation and reduction in chemical reactions.",
+                "subject": "Chemistry",
+                "topic": "Redox Reactions",
+                "difficulty": "Medium",
+                "marks": 10
+            }
+        ],
+        "hard": [
+            {
+                "id": 5,
+                "question": "Define the concept of limit in calculus.",
+                "subject": "Mathematics",
+                "topic": "Calculus",
+                "difficulty": "Hard",
+                "marks": 15
+            },
+            {
+                "id": 8,
+                "question": "Explain the concept of wave-particle duality in quantum mechanics.",
+                "subject": "Physics",
+                "topic": "Quantum Mechanics",
+                "difficulty": "Hard",
+                "marks": 15
+            }
+        ]
+    },
+    "error": {}
+}
 ```
+
+#### Example - 2
+
+<b> req.body</b>
+
+````json
+    {
+    "totalMarks": 20,
+    "easyPercentage": 100,
+    "mediumPercentage": 0,
+    "hardPercentage": 0
+    }
+````
+
+<b>response </b>
+
 ```json
 {
     "success": true,
