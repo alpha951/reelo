@@ -10,6 +10,7 @@ async function loadQuestions(filePath) {
     const parsedQuestion = JSON.parse(questionStore);
     return parsedQuestion;
   } catch (error) {
+    Logger.error(error);
     throw new AppError(
       "Cannot load questions !",
       StatusCodes.INTERNAL_SERVER_ERROR
@@ -82,6 +83,7 @@ async function getQuestions(data) {
     questions.hard = hardQuestions;
     return questions;
   } catch (error) {
+    Logger.error(error);
     throw new AppError(
       "Cannot get  questions !",
       StatusCodes.INTERNAL_SERVER_ERROR
