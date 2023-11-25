@@ -1,6 +1,7 @@
 const { StatusCodes } = require("http-status-codes");
 const { SuccessResponse, ErrorResponse } = require("../utils/common");
 const { Logger } = require("../config");
+const { QuestionPaper } = require("../services");
 
 async function getQuestions(req, res) {
   try {
@@ -10,7 +11,12 @@ async function getQuestions(req, res) {
       mediumPercentage,
       difficultPercentage,
     } = req.body;
-
+    const questions = await QuestionPaper.getQuestions({
+      totalMarks,
+      easy: easyPercentage,
+      medium: mediumPercentage,
+      hard: difficultPercentage,
+    });
     SuccessResponse.data = questions;
     return res.status(StatusCodes.OK).json(SuccessResponse);
   } catch (error) {
